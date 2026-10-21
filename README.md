@@ -10,7 +10,7 @@ python scaffold.py
 
 ## Steps
 
-- [ ] **1.** matmul_cpu
+- [x] **1.** matmul_cpu
 - [x] **2.** max_abs_diff
 - [ ] **3.** matmul_naive_kernel
 - [ ] **4.** matmul_coalesced_kernel

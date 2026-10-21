@@ -6,8 +6,20 @@ Assembled from your step-by-step solutions.
 
 import numpy as np
 
-# Step 1 - matmul_cpu (not yet solved)
-# TODO: implement
+# Step 1 - matmul_cpu
+void matmul_cpu(const float* A, const float* B, float* C, int M, int N, int K) {
+    // TODO: C[m*N + n] = sum over k of A[m*K + k] * B[k*N + n]
+    float helper = 0;
+    for (int m=0; m < M; m++) {
+        for (int n=0; n < N; n++) {
+            helper = 0;
+            for (int k=0; k < K; k++) {
+                helper += A[m*K + k] * B[k*N + n];
+            }
+            C[m*N + n] = helper;
+        }
+    }
+}
 
 # Step 2 - max_abs_diff
 #include <cmath>
